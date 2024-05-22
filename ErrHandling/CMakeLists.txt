@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.29)
+set(projName testErr)
+project(${projName})
+set(context)
+add_subdirectory(test)
+list(GET context 0 err)
+list(GET context 2 3 location)
+message("ERROR: ${err} at ${location}")
