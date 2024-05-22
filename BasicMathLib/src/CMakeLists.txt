@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.29)
+project(BasicMathLib)
+add_executable(BasicMath main.cpp)
+add_library(Math math.cpp)
+target_link_libraries(BasicMath PRIVATE Math)
